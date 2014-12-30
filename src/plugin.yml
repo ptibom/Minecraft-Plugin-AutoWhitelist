@@ -1,0 +1,22 @@
+name: AutoWhitelist
+main: se.autowhitelist.AutoWhitelist
+version: 1
+
+commands:
+   OpenSignup:
+     decription: Auto whitelist players.
+     usage: /OpenSignup minutes
+     permission: AutoWhitelist.OpenSignup
+     permission-message: You don't have permission
+
+   CloseSignup:
+        decription: Closes auto-whitelist.
+        usage: /CloseSignup
+        permission: AutoWhitelist.CloseSignup
+        permission-message: You don't have permission
+
+   CancelSignup:
+        decription: Cancels timer.
+        usage: /CancelSignup
+        permission: AutoWhitelist.CancelSignup
+        permission-message: You don't have permission
