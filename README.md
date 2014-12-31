@@ -36,7 +36,7 @@ The above are runtime requirements. To compile the project a Spigot/Bukkit API i
 
 
 ##Installing##
-1. Grab your self a version [Spigot](http://www.spigotmc.org) server or [Bukkit](http://bukkit.org) server. (Spigot is better)
+1. Grab your self a version of [Spigot](http://www.spigotmc.org) server or [Bukkit](http://bukkit.org) server. (Spigot is better)
 2. When you run the server for the first time, a plugin folder will be created.
 3. Put the AutoWhitelist.jar file in the newly created plugin folder.
 4. Restart the server. (Or use the reload command)
