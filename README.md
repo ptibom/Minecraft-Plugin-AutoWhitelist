@@ -41,3 +41,21 @@ The above are runtime requirements. To compile the project a Spigot/Bukkit API i
 3. Put the AutoWhitelist.jar file in the newly created plugin folder.
 4. Restart the server. (Or use the reload command)
 5. Plugin should now work.
+
+
+##Building & Compiling##
+This is for devs. Look no further if you're not a dev.
+
+Project is created and built in [IntelliJ IDEA 14 Community Edition](https://www.jetbrains.com/idea) and Java 8. Java 7 should work too.
+
+To build, simply open the project file and click build project / build artifacts.
+
+**Building by hand or with other IDEs**
+
+Every file in the src/ folder should be compiled to class files, except plugin.yml.  
+The result should be added to a JAR file.
+
+Make sure to output a JAR file with the following content:  
+JAR-File/plugin.yml  
+JAR-File/se/autowhitelist/AutoWhitelist.class  
+JAR-File/se/autowhitelist/Whitelist.class  
