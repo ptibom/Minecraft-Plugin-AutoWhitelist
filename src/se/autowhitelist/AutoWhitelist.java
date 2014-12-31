@@ -38,7 +38,7 @@ public final class AutoWhitelist extends JavaPlugin implements Listener {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (sender.isOp()) {
+        if (command.getName().equalsIgnoreCase("OpenSignup")) {
             if (args.length == 0) {
                 sender.sendMessage("You need to provide an argument in minutes. Example: /opensignup 10");
                 return true;
@@ -54,6 +54,19 @@ public final class AutoWhitelist extends JavaPlugin implements Listener {
             }
             catch (NumberFormatException e) {
                 sender.sendMessage("You need to provide an argument in minutes. Example: /opensignup 10");
+                return true;
+            }
+        }
+        else if (command.getName().equalsIgnoreCase("CloseSignup")) {
+            if (whitelist != null) { // Make sure whitelist exist before we try to close it.
+                whitelist.closeSignup();
+                return true;
+            }
+        }
+        else if (command.getName().equalsIgnoreCase("CancelSignup")) {
+            if (whitelist != null) { // Make sure whitelist exist before we try to close it.
+                whitelist.cancelSignup();
+                sender.sendMessage("Whitelist timer has canceled.");
                 return true;
             }
         }
