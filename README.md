@@ -58,4 +58,7 @@ The result should be added to a JAR file.
 Make sure to output a JAR file with the following content:  
 JAR-File/plugin.yml  
 JAR-File/se/autowhitelist/AutoWhitelist.class  
-JAR-File/se/autowhitelist/Whitelist.class  
+JAR-File/se/autowhitelist/Whitelist.class
+
+Depdendencies:  
+spigot-api-1.8-R0.1-SNAPSHOT.jar (can be swapped to other versions of spigot and bukkit)
