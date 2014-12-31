@@ -60,5 +60,5 @@ JAR-File/plugin.yml
 JAR-File/se/autowhitelist/AutoWhitelist.class  
 JAR-File/se/autowhitelist/Whitelist.class
 
-**Depdendencies**  
+**Dependencies**  
 spigot-api-1.8-R0.1-SNAPSHOT.jar (can be swapped to other versions of spigot and bukkit)
