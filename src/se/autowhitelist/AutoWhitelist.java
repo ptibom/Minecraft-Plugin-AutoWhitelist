@@ -1,6 +1,7 @@
 /*
     Minecraft Plugin: AutoWhitelist 
     Copyright (C) 2014  Philip Tibom
+    Contact: tibom@student.chalmers.se
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -38,36 +39,35 @@ public final class AutoWhitelist extends JavaPlugin implements Listener {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (command.getName().equalsIgnoreCase("OpenSignup")) {
-            if (args.length == 0) {
-                sender.sendMessage("You need to provide an argument in minutes. Example: /opensignup 10");
-                return true;
-            }
-            if (whitelist != null) {
-                whitelist.cancelSignup();
-            }
-            try {
-                int minutes = Integer.parseInt(args[0]);
-                whitelist = new Whitelist(minutes*60, getServer());
-                whitelist.start();
-                return true;
-            }
-            catch (NumberFormatException e) {
-                sender.sendMessage("You need to provide an argument in minutes. Example: /opensignup 10");
-                return true;
-            }
-        }
-        else if (command.getName().equalsIgnoreCase("CloseSignup")) {
-            if (whitelist != null) { // Make sure whitelist exist before we try to close it.
-                whitelist.closeSignup();
-                return true;
-            }
-        }
-        else if (command.getName().equalsIgnoreCase("CancelSignup")) {
-            if (whitelist != null) { // Make sure whitelist exist before we try to close it.
-                whitelist.cancelSignup();
-                sender.sendMessage("Whitelist timer has canceled.");
-                return true;
+        if (sender.isOp()) {
+            if (command.getName().equalsIgnoreCase("OpenSignup")) {
+                if (args.length == 0) {
+                    sender.sendMessage("You need to provide an argument in minutes. Example: /opensignup 10");
+                    return true;
+                }
+                if (whitelist != null) {
+                    whitelist.cancelSignup();
+                }
+                try {
+                    int minutes = Integer.parseInt(args[0]);
+                    whitelist = new Whitelist(minutes * 60, getServer());
+                    whitelist.start();
+                    return true;
+                } catch (NumberFormatException e) {
+                    sender.sendMessage("You need to provide an argument in minutes. Example: /opensignup 10");
+                    return true;
+                }
+            } else if (command.getName().equalsIgnoreCase("CloseSignup")) {
+                if (whitelist != null) { // Make sure whitelist exist before we try to close it.
+                    whitelist.closeSignup();
+                    return true;
+                }
+            } else if (command.getName().equalsIgnoreCase("CancelSignup")) {
+                if (whitelist != null) { // Make sure whitelist exist before we try to close it.
+                    whitelist.cancelSignup();
+                    sender.sendMessage("Whitelist timer has canceled.");
+                    return true;
+                }
             }
         }
         return false;
