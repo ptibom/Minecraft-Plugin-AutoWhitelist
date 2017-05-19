@@ -4,7 +4,7 @@ Minecraft-Plugin-AutoWhitelist
 **[Download ready to use Plugin](https://github.com/ptibom/Minecraft-Plugin-AutoWhitelist/raw/master/DownloadCompiledPluginHere/AutoWhitelist.jar)**
 
 
-##Plugin Description##
+## Plugin Description ##
 Opens auto-whitelisting for a set period of time. Then closes signup.
 
 **Commands:**  
@@ -17,7 +17,7 @@ Opens auto-whitelisting for a set period of time. Then closes signup.
 /cancelsignup
 - Cancels the timer. Auto whitelisting remains. (Not fully tested, could cause issues.)
 
-##Requirements##
+## Requirements ##
 The plugin is built with Java 8 for [Spigot 1.8](http://www.spigotmc.org/). Although not tested, it should work for earlier versions of [Spigot](http://www.spigotmc.org) and [Bukkit](http://bukkit.org). It should also work for Java 7.
 
 [Bukkit](http://bukkit.org) is a Minecraft server with plugin functionality. It is no longer being developed.  
@@ -35,7 +35,7 @@ The plugin is built with Java 8 for [Spigot 1.8](http://www.spigotmc.org/). Alth
 The above are runtime requirements. To compile the project a Spigot/Bukkit API is required and it is included in the project. The API doesn't provide much code but rather the classes and function definitions so that they can be called within the project.
 
 
-##Installing##
+## Installing ##
 1. Grab your self a version of [Spigot](http://www.spigotmc.org) server or [Bukkit](http://bukkit.org) server. (Spigot is better)
 2. When you run the server for the first time, a plugin folder will be created.
 3. Put the [AutoWhitelist.jar](https://github.com/ptibom/Minecraft-Plugin-AutoWhitelist/raw/master/DownloadCompiledPluginHere/AutoWhitelist.jar) file in the newly created plugin folder.
@@ -43,7 +43,7 @@ The above are runtime requirements. To compile the project a Spigot/Bukkit API i
 5. Plugin should now work.
 
 
-##Building & Compiling##
+## Building & Compiling ##
 This is for devs. Look no further if you're not a dev.
 
 Project is created and built in [IntelliJ IDEA 14 Community Edition](https://www.jetbrains.com/idea) and Java 8. Java 7 should work too.
